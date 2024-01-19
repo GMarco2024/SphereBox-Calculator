@@ -14,6 +14,8 @@
 		90F0EEF52B5B3544008AD3BA /* SphereBox_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0EEF42B5B3544008AD3BA /* SphereBox_CalculatorTests.swift */; };
 		90F0EEFF2B5B3544008AD3BA /* SphereBox_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0EEFE2B5B3544008AD3BA /* SphereBox_CalculatorUITests.swift */; };
 		90F0EF012B5B3544008AD3BA /* SphereBox_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0EF002B5B3544008AD3BA /* SphereBox_CalculatorUITestsLaunchTests.swift */; };
+		90F0EF0E2B5B354D008AD3BA /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0EF0D2B5B354D008AD3BA /* Sphere.swift */; };
+		90F0EF102B5B355A008AD3BA /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0EF0F2B5B355A008AD3BA /* BoundingBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		90F0EEFA2B5B3544008AD3BA /* SphereBox CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SphereBox CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F0EEFE2B5B3544008AD3BA /* SphereBox_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereBox_CalculatorUITests.swift; sourceTree = "<group>"; };
 		90F0EF002B5B3544008AD3BA /* SphereBox_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereBox_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		90F0EF0D2B5B354D008AD3BA /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		90F0EF0F2B5B355A008AD3BA /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				90F0EEE22B5B3543008AD3BA /* SphereBox_CalculatorApp.swift */,
 				90F0EEE42B5B3543008AD3BA /* ContentView.swift */,
+				90F0EF0D2B5B354D008AD3BA /* Sphere.swift */,
+				90F0EF0F2B5B355A008AD3BA /* BoundingBox.swift */,
 				90F0EEE62B5B3544008AD3BA /* Assets.xcassets */,
 				90F0EEE82B5B3544008AD3BA /* SphereBox_Calculator.entitlements */,
 				90F0EEE92B5B3544008AD3BA /* Preview Content */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F0EEE52B5B3543008AD3BA /* ContentView.swift in Sources */,
+				90F0EF102B5B355A008AD3BA /* BoundingBox.swift in Sources */,
+				90F0EF0E2B5B354D008AD3BA /* Sphere.swift in Sources */,
 				90F0EEE32B5B3543008AD3BA /* SphereBox_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
