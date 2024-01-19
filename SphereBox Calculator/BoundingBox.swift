@@ -2,7 +2,7 @@
 //  BoundingBox.swift
 //  HW 1
 //
-//  Created by PHYS 440 Marco on 1/18/24.
+//  Created by PHYS 440 Marco on 1/18/2024.
 //
 
 import Foundation
