@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BoundingBox {
+@Observable class BoundingBox {
     var radius: Double
 
     init(radius: Double) {
@@ -27,7 +27,7 @@ class BoundingBox {
         let height = maxY - minY
         let depth = maxZ - minZ
 
-        // Validate dimensions for the bounding box
+        // Validational dimensions for the bounding box
         guard width >= 0, height >= 0, depth >= 0 else {
             // Handle invalidation input for bounding box
             return nil
@@ -40,4 +40,3 @@ class BoundingBox {
         return (volume, surfaceArea)
     }
 }
-

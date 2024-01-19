@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    // States the variables to hold user input and the calculated results
     @State private var radiusInput: String = ""
     @State private var calculatedVolume: Double?
     @State private var calculatedSurfaceArea: Double?
@@ -48,7 +47,7 @@ struct ContentView: View {
                 }
             }
 
-            // Division of seperation
+            // Division of separation
             Divider()
 
             // Bounding Box Properties
@@ -73,7 +72,7 @@ struct ContentView: View {
         .padding()
     }
 
-    // Calculate of sphere and bounding box properties
+    // Calculate sphere and bounding box properties
     private func calculateSphereProperties() {
         // Validate and convert user input to a numeric value
         guard let radius = Double(radiusInput), radius >= 0 else {
@@ -85,40 +84,22 @@ struct ContentView: View {
         // Reset error message if input is valid
         errorMessage = nil
 
-        // Calculation of sphere properties
-        calculatedVolume = (4.0 / 3.0) * Double.pi * pow(radius, 3)
-        calculatedSurfaceArea = 4 * Double.pi * pow(radius, 2)
+        // Create an instance of Sphere
+        let sphere = Sphere(radius: radius)
 
-        // Calculation of bounding box properties
-        let minX = -radius
-        let maxX = radius
-        let minY = -radius
-        let maxY = radius
-        let minZ = -radius
-        let maxZ = radius
-
-        let width = maxX - minX
-        let height = maxY - minY
-        let depth = maxZ - minZ
-
-        // Dimensional validation for the bounding box
-        guard width >= 0, height >= 0, depth >= 0 else {
-            // Handle invalid input for bounding box
-            errorMessage = "Error: Invalid dimensions for the bounding box. Please enter a valid non-negative number for the radius."
-            return
+        // Calculate sphere properties
+        if let sphereProperties = sphere.calculateSphereProperties() {
+            calculatedVolume = sphereProperties.volume
+            calculatedSurfaceArea = sphereProperties.surfaceArea
         }
 
-        // Reset error message if input for bounding box is valid
-        errorMessage = nil
+        // Create an instance of BoundingBox
+        let boundingBox = BoundingBox(radius: radius)
 
-        // Calculation of bounding box properties
-        boundingBoxVolume = width * height * depth
-        boundingBoxSurfaceArea = 2 * (width * height + height * depth + width * depth)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        // Calculate bounding box properties
+        if let boundingBoxProperties = boundingBox.calculateBoundingBoxProperties() {
+            boundingBoxVolume = boundingBoxProperties.volume
+            boundingBoxSurfaceArea = boundingBoxProperties.surfaceArea
+        }
     }
 }
