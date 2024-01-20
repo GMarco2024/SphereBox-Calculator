@@ -1,1 +1,1 @@
-Final version of the first honework assignemnt for Physics-440.
+Final version of the first homework assignemnt for Physics-440.
