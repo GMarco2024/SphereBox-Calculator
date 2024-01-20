@@ -23,5 +23,3 @@ class SphereBox_CalculatorTests: XCTestCase {
     }
 
 }
-
-}
