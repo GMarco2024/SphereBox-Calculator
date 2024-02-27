@@ -7,35 +7,27 @@
 
 import Foundation
 
-@Observable class BoundingBox {
-    var radius: Double
+class BoundingBox: ObservableObject {
+    @Published var radius: Double
 
     init(radius: Double) {
         self.radius = radius
     }
 
-    // Function to calculate the bounding box properties
+// Function to calculate the bounding box properties
+    
+// Since the bounding box would be a cube encapsulating the sphere
+    
     func calculateBoundingBoxProperties() -> (volume: Double, surfaceArea: Double)? {
-        let minX = -radius
-        let maxX = radius
-        let minY = -radius
-        let maxY = radius
-        let minZ = -radius
-        let maxZ = radius
+        let sideLength = radius * 2
 
-        let width = maxX - minX
-        let height = maxY - minY
-        let depth = maxZ - minZ
+//Volume = sideLength^3
+        
+        let volume = pow(sideLength, 3)
 
-        // Validational dimensions for the bounding box
-        guard width >= 0, height >= 0, depth >= 0 else {
-            // Handle invalidation input for bounding box
-            return nil
-        }
-
-        // Calculate bounding box properties
-        let volume = width * height * depth
-        let surfaceArea = 2 * (width * height + height * depth + width * depth)
+//Surface Area = 6(sidelength^2)
+        
+        let surfaceArea = 6 * pow(sideLength, 2)
 
         return (volume, surfaceArea)
     }

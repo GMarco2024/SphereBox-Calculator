@@ -7,6 +7,8 @@
 
 import Foundation
 
+//We make the class for the the Sphere
+
 class Sphere {
     var radius: Double
 
@@ -21,11 +23,22 @@ class Sphere {
             return nil
         }
 
-        // Calculate sphere properties
+// Volume of Sphere
+//
+//        4     3
+//[ V  =  - pi r  ]
+//        3
+//
+        
         let volume = (4.0 / 3.0) * Double.pi * pow(radius, 3)
+     
+//              2
+//[ A  =  4 pi r  ]
+        
         let surfaceArea = 4 * Double.pi * pow(radius, 2)
 
         return (volume, surfaceArea)
+        
     }
 
 }
